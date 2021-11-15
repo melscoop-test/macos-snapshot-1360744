@@ -26,7 +26,7 @@ jobs:
       
       - name: Install Dependencies
         run: cd Example && pod install --repo-update       
-        shell: bash
+#        shell: bash
       
       - name: Build and Test
         run: cd Example && fastlane unit_tests
