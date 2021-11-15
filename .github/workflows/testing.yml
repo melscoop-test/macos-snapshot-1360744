@@ -1,5 +1,5 @@
 name: Testing
-on: pull_request 
+on: workflow_dispatch
 jobs:
   test:
     name: Run unit tests
