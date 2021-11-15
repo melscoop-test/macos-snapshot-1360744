@@ -16,7 +16,7 @@ jobs:
         with:
           version: '13'
       
-      - name: view files
+      - name: view pre-dependency install files
         run: ls -lath
       
       - name: Cache dependencies
@@ -28,8 +28,10 @@ jobs:
             ${{ runner.os }}-pods-${{ secrets.CACHE_VERSION }}-
       
       - name: Install Dependencies
-        run: cd Example && pod install --repo-update       
-#        shell: bash
+        run: |
+          ls -lath
+          cd Example && pod install --repo-update       
+#         shell: bash
       
       - name: Build and Test
         run: cd Example && fastlane unit_tests
